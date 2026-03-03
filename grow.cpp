@@ -116,7 +116,7 @@ protected:
 
     void initParameter(uint32_t index, Parameter& parameter) override
     {
-        // Set up our parameters (the "knobs")
+        // Set up our parameters
         switch (index)
         {
         case kParamStructure:
@@ -249,7 +249,7 @@ protected:
     // We handle parameter values in the `run` method, so this can be left empty.
     void setParameterValue(uint32_t index, float value) override
     {
-        // This is called when a knob is turned by the user or DAW automation
+        // This is called when a slider is moved by the user or DAW automation
         switch (index)
         {
         case kParamStructure:
