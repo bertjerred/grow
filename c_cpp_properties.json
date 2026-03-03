@@ -1,0 +1,17 @@
+// filepath: .vscode/c_cpp_properties.json
+{
+  "configurations": [
+    {
+      "name": "Mac",
+      "includePath": [
+        "${workspaceFolder}/**",
+        "${workspaceFolder}/plugins/grow",
+        "${workspaceFolder}/**",
+        "${workspaceFolder}/dpf/dgl"
+      ],
+      "compilerPath": "/usr/bin/clang++",
+      "cppStandard": "c++17"
+    }
+  ],
+  "version": 4
+}
