@@ -26,7 +26,7 @@ DGL_DIR = $(DPF_DIR)/dgl
 CXXFLAGS += -I$(DGL_DIR)
 BUILD_CXX_FLAGS += -I$(DGL_DIR)
 
-# (Optional) If you also need to explicitly target NanoVG's source folder for specific includes
+# NanoVG's source folder for specific includes
 CXXFLAGS += -I$(DGL_DIR)/src/nanovg
 BUILD_CXX_FLAGS += -I$(DGL_DIR)/src/nanovg
 
