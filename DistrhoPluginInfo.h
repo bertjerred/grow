@@ -19,8 +19,8 @@
 #define DISTRHO_PLUGIN_NUM_OUTPUTS      2
 
 // Initial GUI size
-#define DISTRHO_UI_DEFAULT_WIDTH        500
-#define DISTRHO_UI_DEFAULT_HEIGHT       350
+#define DISTRHO_UI_DEFAULT_WIDTH        1200
+#define DISTRHO_UI_DEFAULT_HEIGHT       800
 
 // It's good practice to define a version number
 #define DISTRHO_PLUGIN_VERSION d_version(0, 1, 0)
