@@ -41,7 +41,7 @@ struct SliderInfo {
 
 class UIGrow : public UI {
 public:
-    UIGrow() : UI(1200, 800) { // Scaled up window for the 2x text layout
+    UIGrow() : UI(1200, 800) {
         setupSliders();
     }
 
@@ -62,7 +62,7 @@ protected:
             fFontLoaded = true;
         }
 
-        // Background (#B9E2A7)
+        // Background
         beginPath();
         rect(0, 0, w, h);
         fillColor(Color(185, 226, 167)); 
@@ -114,7 +114,7 @@ protected:
     }
 
     void drawSlider(const SliderInfo& slider, int index, const Color& blue, const Color& pink) {
-        // Slider Track (slightly thicker)
+        // Slider Track
         float trackX = slider.x + (slider.width * 0.5f);
         beginPath();
         rect(trackX - 2, slider.y, 4, slider.height);
@@ -128,11 +128,11 @@ protected:
 
         // Slider Thumb
         beginPath();
-        rect(slider.x, thumbY - 4, slider.width, 8); // Doubled thumb thickness
+        rect(slider.x, thumbY - 4, slider.width, 8);
         fillColor(Color(255, 255, 255));
         fill();
 
-        // --- NEW TOP-JUSTIFIED LABELS (32px) ---
+        // --- TOP-JUSTIFIED LABELS (32px) ---
         fillColor((index % 2 == 0) ? blue : pink);
         fontSize(32);
         
@@ -164,11 +164,11 @@ protected:
             const float w = getWidth();
             const float h = getHeight();
 
-            // Enlarged Link Hitboxes
+            // Link Hitboxes
             if (ev.pos.getX() >= 40 && ev.pos.getX() <= 210 && 
                 ev.pos.getY() >= h - 100 && ev.pos.getY() <= h - 60) {
                 
-                openURL("https://github.com/bertjerred/grow"); // Replace with your real URL
+                openURL("https://github.com/bertjerred/grow");
                 return true; 
             }
 
@@ -176,7 +176,7 @@ protected:
             if (ev.pos.getX() >= w - 180 && ev.pos.getX() <= w - 40 && 
                 ev.pos.getY() >= h - 60 && ev.pos.getY() <= h - 20) {
                 
-                openURL("https://github.com/bertjerred/grow/blob/main/LICENSE.md"); // Replace with your real URL
+                openURL("https://github.com/bertjerred/grow/blob/main/LICENSE.md");
                 return true;
             }
         }
@@ -221,11 +221,11 @@ private:
     void setupSliders() {
         fSliders.resize(GrowPlugin::kParamCount);
 
-        const float sliderW = 32;  // Doubled width
-        const float sliderH = 250; // Increased height to match 2x text scale
+        const float sliderW = 32;
+        const float sliderH = 250;
         const float startX = 100;
-        const float spacing = 72;  // Wider spacing to avoid label overlap
-        const float yPos = 160;    // Positioned below the 96px title
+        const float spacing = 72;
+        const float yPos = 160;
 
         // Map parameters to the single row
         fSliders[GrowPlugin::kParamStructure]  = {startX + (0 * spacing), yPos, sliderW, sliderH, 0.0f, 1.0f, 0.2677f, "STRUCT", false};
