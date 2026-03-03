@@ -1,7 +1,7 @@
 # grow
 A Karplus-Strong string synthesizer with a minimalist aesthetic. 
 
-grow is a digital synthesizer designed by Bert Jerred. It utilizes physical modeling to create plucked-string sounds, processed through a global LFO, a resonant ladder filter, and a spacious SC-style reverb.
+grow is a digital synthesizer designed by Bert Jerred. It utilizes physical modeling to create plucked-string sounds, processed through a global LFO, a resonant ladder filter, and a spacious reverb.
 
 ![grow plugin screenshot](https://github.com/bertjerred/grow/blob/main/grow-screenshot.png)
 
